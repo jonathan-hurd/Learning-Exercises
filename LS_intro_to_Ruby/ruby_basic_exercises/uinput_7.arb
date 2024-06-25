@@ -1,0 +1,32 @@
+def valid_number?(number_string)
+    number_string.to_i.to_s == number_string
+end
+
+loop do
+    puts "Please enter the numerator:"
+    numerator = gets.chomp
+
+    if valid_number?(numerator)
+        loop do
+            puts "Please enter the denominator:"
+            denominator = gets.chomp
+    
+            if valid_number?(denominator) && denominator.to_i != 0
+                result = numerator.to_i.divmod(denominator.to_i)
+                puts "#{numerator} divided by #{denominator} is #{result[0]} with a remainder of #{result[1]}"
+                break
+                
+            else
+                puts "Please enter a non-zero integer"
+                redo
+            end
+        end
+        break
+        
+    else
+        puts "Please enter an integer"
+        redo
+    end
+end
+        
+

@@ -1,0 +1,16 @@
+PASSWORD = "123abc"
+USERNAME = "Jonathan"
+
+loop do
+    puts "Please enter user name:"
+    user_name = gets.chomp
+    puts "Please enter your password:"
+    password = gets.chomp
+
+    if password == PASSWORD && user_name u= USERNAME
+        puts "Welcome"
+        break
+    else
+        puts "Authorization failed" 
+    end
+end

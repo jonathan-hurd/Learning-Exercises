@@ -1,0 +1,36 @@
+def valid_number?(number_string)
+    number_string.to_i.to_s == number_string && number_string.to_i != 0
+end
+
+def get_number
+    loop do
+        puts "Please enter a positive or negative integer."
+        integer = gets.chomp
+        return integer.to_i if valid_number?(integer)
+        puts "Invalid input. Only non-zero integers are allowed."
+    end
+end
+
+integer_1 = 0
+integer_2 = 0
+
+loop do
+    integer_1 = get_number
+    integer_2 = get_number
+
+    break if integer_1 < 0 || integer_2 < 0
+    puts "Sorry. One integer must be positive and one must me negative."
+    puts "Please start over."
+end
+sum = integer_1 + integer_2
+
+puts "#{integer_1} + #{integer_2} = #{sum}"
+
+
+    
+
+
+    
+
+
+

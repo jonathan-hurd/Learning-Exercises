@@ -1,0 +1,4 @@
+#Hiding my references folder
+LS_intro_to_Ruby/cheatsheets_references
+# Ignore vim backup files
+*~

@@ -1,0 +1,10 @@
+def greeting(a)
+   counter = 0
+   while counter < a 
+    puts "Hello!"
+    counter += 1
+   end
+end
+  
+number_of_greetings = 2
+greeting(number_of_greetings)
